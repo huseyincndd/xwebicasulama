@@ -104,7 +104,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
 
         {/* Categories */}
         <div className="py-3">
-          {categories.map((category, _) => {
+          {categories.map((category) => {
             const isOpenCategory = openCategories.includes(category.slug);
             
             return (
@@ -153,7 +153,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                   isOpenCategory ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'
                 }`}>
                   <div className="bg-gradient-to-br from-slate-50 via-blue-50/30 to-green-50/30 rounded-2xl p-2 border border-gray-100/50 shadow-inner">
-                    {category.subcategories.map((sub, _) => (
+                    {category.subcategories.map((sub) => (
                       <Link
                         key={sub.slug}
                         href={`/categories/${category.slug}/${sub.slug}`}
