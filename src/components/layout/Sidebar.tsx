@@ -2,27 +2,12 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { ChevronRight, ChevronDown, Layers, Sparkles } from 'lucide-react';
+import { ChevronRight, Layers, Sparkles } from 'lucide-react';
 import { useState } from 'react';
-import { mockCategories } from '@/lib/mock-data';
 
 interface SidebarProps {
   isOpen: boolean;
   setIsOpen: (open: boolean) => void;
-}
-
-// URL-safe slug oluşturan fonksiyon
-function createSlug(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/ğ/g, 'g')
-    .replace(/ı/g, 'i')
-    .replace(/ş/g, 's')
-    .replace(/ç/g, 'c')
-    .replace(/ö/g, 'o')
-    .replace(/ü/g, 'u')
-    .replace(/\s+/g, '-')
-    .replace(/[^a-z0-9-]/g, '');
 }
 
 export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
@@ -119,7 +104,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
 
         {/* Categories */}
         <div className="py-3">
-          {categories.map((category, index) => {
+          {categories.map((category, _) => {
             const isOpenCategory = openCategories.includes(category.slug);
             
             return (
@@ -168,7 +153,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                   isOpenCategory ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'
                 }`}>
                   <div className="bg-gradient-to-br from-slate-50 via-blue-50/30 to-green-50/30 rounded-2xl p-2 border border-gray-100/50 shadow-inner">
-                    {category.subcategories.map((sub, subIndex) => (
+                    {category.subcategories.map((sub, _) => (
                       <Link
                         key={sub.slug}
                         href={`/categories/${category.slug}/${sub.slug}`}

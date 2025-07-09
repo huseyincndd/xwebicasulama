@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ChevronRight, Filter, Grid, List, Star, ShoppingCart, Eye, Droplets, Sprout, Zap, Wrench, Settings, Home, Waves } from 'lucide-react';
+import { ChevronRight, Filter, Grid, List, Star, ShoppingCart, Eye, Droplets, Zap, Wrench, Settings, Home, Waves } from 'lucide-react';
 import { mockProducts } from '@/lib/mock-data';
 
 interface PageProps {

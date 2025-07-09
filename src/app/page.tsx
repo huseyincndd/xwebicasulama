@@ -5,8 +5,7 @@ import { mockProducts } from '@/lib/mock-data';
 import HeroSlider from '@/components/HeroSlider';
 
 export default function Home() {
-  // Get featured products and all products for display
-  const featuredProducts = mockProducts.filter(product => product.isFeatured);
+  // Get all products for display
   const allProducts = mockProducts.slice(0, 12); // Show first 12 products
 
   return (

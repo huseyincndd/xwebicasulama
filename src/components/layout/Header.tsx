@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ShoppingCart, Menu, Search, User, Phone, Mail, MapPin, Globe } from 'lucide-react';
+import { ShoppingCart, Menu, Search, User, Phone, Mail, MapPin } from 'lucide-react';
 import { useState } from 'react';
 
 interface HeaderProps {

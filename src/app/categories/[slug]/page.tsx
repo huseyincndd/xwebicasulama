@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronRight, Filter, Grid, List, Star, ShoppingCart, Eye, Droplets, Sprout, Zap, Wrench, Settings, Home, Waves } from 'lucide-react';
-import { mockProducts, mockCategories } from '@/lib/mock-data';
+import { mockProducts } from '@/lib/mock-data';
 
 interface PageProps {
   params: Promise<{
